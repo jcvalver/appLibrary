@@ -25,6 +25,7 @@ public class BasicLibraryUserService implements LibraryUserService {
 
 	@Override
 	public void save(LibraryUser user) {
+		System.out.println(user.toString());
 		user.setUserPassword(encoderPassword.encode(user.getUserPassword()));
 		user.setRoles(new HashSet<>(roleRepository.findAll()));
 		user.setUserDateRegistry(new Date());

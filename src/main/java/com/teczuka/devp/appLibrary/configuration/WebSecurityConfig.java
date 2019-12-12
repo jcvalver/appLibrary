@@ -91,18 +91,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		 http
          .authorizeRequests()
          .antMatchers("/login/**").permitAll()
-         .antMatchers("/appLibrary/**").permitAll()
-        // .antMatchers("/ventas").hasAuthority("ROLE_ADMIN")
-        // .anyRequest().authenticated()
+         .antMatchers("/appLibrary/resources/**").permitAll()
+         .antMatchers("/appLibrary/user/**").permitAll()
+         .antMatchers("/appLibrary/**").authenticated()
          .and()
-        .formLogin().loginPage("/login").loginProcessingUrl("/login").usernameParameter("username")//
-		.passwordParameter("password").defaultSuccessUrl("/welcome").permitAll()//;//.failureUrl("/login?error").permitAll();
-		 .and().logout().logoutUrl("/logout") .logoutSuccessUrl("/login?logout");// .invalidateHttpSession(true).deleteCookies("JSESSIONID");
-		//http
-        // .logout().logoutUrl("/login?logout").logoutSuccessUrl("/login?logout").permitAll();
-       //  .and()
-       //  .csrf()//Disabled CSRF protection
-       //  .disable();
+         .formLogin().loginPage("/login").loginProcessingUrl("/login").usernameParameter("username")//
+         .passwordParameter("password").defaultSuccessUrl("/dashboard").permitAll()//;//.failureUrl("/login?error").permitAll();
+		 .and().logout().logoutUrl("/logout") .logoutSuccessUrl("/login?logout")//;// .invalidateHttpSession(true).deleteCookies("JSESSIONID");		
+		 .and()
+         .csrf()//Disabled CSRF protection
+         .disable();
 	}
 
 }

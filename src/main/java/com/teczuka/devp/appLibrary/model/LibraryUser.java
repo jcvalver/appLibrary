@@ -192,6 +192,7 @@ public class LibraryUser implements Serializable {
 		return "LibraryUser [userId=" + userId + ", userFullname=" + userFullname + ", userEmail=" + userEmail
 				+ ", userName=" + userName + ", userPassword=" + userPassword + ", userState=" + userState
 				+ ", userDateRegistry=" + userDateRegistry + ", userDateUpdate=" + userDateUpdate
-				+ ", userUserRegistry=" + userUserRegistry + ", userUserUpdate=" + userUserUpdate + "]";
+				+ ", userUserRegistry=" + userUserRegistry + ", userUserUpdate=" + userUserUpdate
+				+ ", userPasswordConfirm="+userPasswordConfirm+"]";
 	}
 }

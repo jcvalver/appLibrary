@@ -1,0 +1,45 @@
+.container-fluid-dashboard {
+	margin-top: 100px;
+}
+
+.content-dashboard * {
+	list-style: none;
+}
+
+.content-dashboard li {
+	line-height: 180%;
+}
+
+.content-dashboard li a {
+	color: #222;
+	text-decoration: none;
+}
+
+.content-dashboard li a:before {
+	content: "\025b8";
+	color: #ddd;
+	margin-right: 4px;
+}
+
+.content-dashboard input[name="list"] {
+	position: absolute;
+	left: -1000em;
+}
+
+.content-dashboard label:before {
+	content: "\025b8";
+	margin-right: 4px;
+}
+
+.content-dashboard input:checked ~ label:before {
+	content: "\025be";
+}
+
+.content-dashboard .interior {
+	display: none;
+}
+
+.content-dashboard input:checked ~ ul {
+	display: block;
+}
+

@@ -1,0 +1,14 @@
+.dropdown-menu-perfil{
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    display: none;
+    float: right;
+    min-width: 20rem;
+    padding-right: .5rem;
+    padding-left:0;
+    margin-right: .125rem;
+    margin-left:0;
+    
+}

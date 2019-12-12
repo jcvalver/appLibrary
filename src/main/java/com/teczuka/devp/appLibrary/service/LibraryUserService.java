@@ -7,4 +7,6 @@ public interface LibraryUserService {
 	void save(LibraryUser user);
 
 	LibraryUser findByUserName(String userName);
+	
+	
 }
